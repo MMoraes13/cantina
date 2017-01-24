@@ -58,7 +58,7 @@ while($res = mysqli_fetch_array($result))
 	<title>Editar aluno</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Product Order Form Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- fonts  -->
 	<link href="//fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet">
@@ -109,11 +109,7 @@ while($res = mysqli_fetch_array($result))
 			</div>
 		
 		</div>	
-			
-			
-
 		<div class="clear"></div>
-		
 		<div class="form-control last">
 			<input type="hidden" value=<?php echo $id; ?> id="id" name="id"/>
 			<input type="hidden" value="update" id="update" name="update"/>
