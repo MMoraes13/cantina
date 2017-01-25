@@ -42,6 +42,16 @@ table {
 	border-collapse:collapse;
 	border-spacing:0;
 }
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
 
 /* start editing from here */
 a {
@@ -687,7 +697,7 @@ color:#fff!important;
 	color:#fff;
 }
 .reset {
-	background-color:#a9922c;
+	background-color:red;
     width:20%;
 	float:left;
     height: 50px;

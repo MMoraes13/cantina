@@ -17,7 +17,11 @@ $databaseHost = 'localhost';
 $databaseName = 'cantina';
 $databaseUsername = 'root';
 $databasePassword = '123456';
-
-$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
+   mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+   try { 
+      $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+   } catch (mysqli_sql_exception $e) { 
+        throw new MySQLiQueryException($SQL, $e->getMessage(), $e->getCode());
+   }
  
 ?>

@@ -8,11 +8,13 @@
 //including the database connection file
 include_once("config.php");
 
+   try { 
+
 	$nomeFuncionario = mysqli_real_escape_string($mysqli, $_POST['firstname']);
 	$sobrenomeFuncionario = mysqli_real_escape_string($mysqli, $_POST['lastname']);
 	$login = mysqli_real_escape_string($mysqli, $_POST['login']);
-	$password = mysqli_real_escape_string($mysqli, $_POST['senha']);
-	$password = md5($password);
+	$password = mysqli_real_escape_string($mysqli, $_POST['password']);
+	$pass = md5($password);
 
 	// checking empty fields
 	if(empty($nomeFuncionario) || empty($sobrenomeFuncionario) || empty($login) || empty ($password)) {
@@ -34,14 +36,16 @@ include_once("config.php");
 		// if all the fields are filled (not empty) 
 			
 		//insert data to database	
-		echo "INSERT INTO administrador(nome,sobrenome,login, pass) VALUES('$nomeFuncionario','$sobrenomeFuncionario', '$login', '$password');";
-		$result = mysqli_query($mysqli, "INSERT INTO administrador(nome,sobrenome,login, pass) VALUES('$nomeFuncionario','$sobrenomeFuncionario', '$login', '$password');");
+		echo "INSERT INTO administrador(nome,sobrenome,login, pass) VALUES('$nomeFuncionario','$sobrenomeFuncionario', '$login', '$pass');";
+		$result = mysqli_query($mysqli, "INSERT INTO administrador(nome,sobrenome,login, pass) VALUES('$nomeFuncionario','$sobrenomeFuncionario', '$login', '$pass');");
 		
 		//display success messadministrador
 		echo "<font color='green'>Data added successfully.";
 		echo "<br/><a href='index.php'>View Result</a>";
 	}
-
+   } catch (mysqli_sql_exception $e) { 
+   		echo "já existe";
+    }
 ?>
 </body>
 </html>
