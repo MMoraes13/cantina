@@ -14,7 +14,27 @@ body {
 	font:inherit;
 	vertical-align:baseline;
 }
-html,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+h2 {
+	font-family: 'Nova Flat', cursive;
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+}
+a{
+	font-family: 'Nova Flat', cursive;
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+}
+}
+}
+html,div,span,applet,object,iframe,h1,h3,h4,h5,h6,p,blockquote,pre,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
 	margin:0;
 	padding:0;
 	border:0;
@@ -46,11 +66,10 @@ button {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 8px;
 }
 
 /* start editing from here */
@@ -177,7 +196,7 @@ label.header span {
 	top:0;
 	/*-- w3ls --*/
 }
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#password, input#login {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#password, input#login, input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#password, input#login, input#code {
     border: 1px solid #fff;
     color: #fff;
     text-align: justify;
@@ -739,7 +758,7 @@ p.copyright a:hover {
 
 /*-- responsive design --*/
 @media (max-width:1600px) {
-	input#firstname, input#lastname, input#city, input#state, input#zip, input#email {
+	input#firstname, input#lastname, input#city, input#state, input#zip, input#email,input#address, input#address2, input#login,  input#password, input#number {
 	width:270px;	
 	}
 	input#usrtel1 {
@@ -757,7 +776,7 @@ select {
 }
 
 @media (max-width: 1440px) {
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email,input#address, input#address2, input#login,  input#password, input#number {
     width: 239px;
 }
 .form-wthree1, .form-wthree2,.form-wthree3, .form-wthree4 {
@@ -778,7 +797,7 @@ select {
 }
 
 @media (max-width: 1366px) {
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email,input#address, input#address2, input#login,  input#password, input#number {
     width: 215px;
 }
 input#usrtel2 {
@@ -806,7 +825,7 @@ select {
 .content-w3ls {
     width: 75%;
 }
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email,input#address, input#address2, input#login,  input#password, input#number {
     width: 203px;
 }
 input#usrtel2 {
@@ -827,7 +846,7 @@ h1.header-agileits {
 label.header {
     font-size: 15px;
 }
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email,input#address, input#address2, input#login,  input#password, input#number {
 	font-size:14px;
 	width:178px;
 }
@@ -892,7 +911,7 @@ p.copyright {
 }
 
 @media (max-width:1050px) {
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email,input#address, input#address2, input#login,  input#password, input#number {
 	width:166px;
 }
 input#usrtel2 {
@@ -917,7 +936,7 @@ label.header {
     font-size: 14px;
 	width:175px;
 }
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email,input#address, input#address2, input#login,  input#password, input#number {
     width: 175px;
 }
 .register {
@@ -936,7 +955,7 @@ select {
     width: 100%;
     float: none;
 }
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email,input#address, input#address2 {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email,input#address, input#address2, input#login,  input#password, input#number {
     width: 567px;
 }
 input#usrtel2 {
@@ -958,7 +977,7 @@ select {
 }
 
 @media (max-width: 900px) {
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password, input#number {
     width: 494px;
 }
 input#usrtel2 {
@@ -976,7 +995,7 @@ select {
 }
 
 @media (max-width: 800px) {
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password, input#number {
     width: 414px;
 }
 input#usrtel2 {
@@ -991,7 +1010,7 @@ select {
 }
 
 @media (max-width: 768px) {
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password, input#number {
     width: 389px;
 }
 input#usrtel2 {
@@ -1006,7 +1025,7 @@ select {
 }
 
 @media (max-width: 736px) {
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password, input#number {
     width: 363px;
 }
 input#usrtel2 {
@@ -1034,7 +1053,7 @@ h1.header-agileits {
 }
 
 @media (max-width: 667px) {
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password, input#number {
     width: 308px;
 }
 input#usrtel2 {
@@ -1049,7 +1068,7 @@ select {
 }
 
 @media (max-width: 640px) {
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password, input#number {
     width: 286px;
 }
 input#usrtel2 {
@@ -1061,7 +1080,7 @@ select {
 }
 
 @media (max-width: 600px) {
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password, input#number {
     width: 254px;
 }
 input#usrtel2 {
@@ -1079,7 +1098,7 @@ select {
 }
 
 @media (max-width: 568px) {
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password, input#number {
     width: 229px;
 }
 input#usrtel2 {
@@ -1097,7 +1116,7 @@ select {
 h1.header-agileits {
     font-size: 23px;
 }
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password, input#number {
     width: 168px;
 }
 label.header span {
@@ -1134,7 +1153,7 @@ h1.header-agileits {
     width: 75%;
 	padding:25px;
 }
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#login,  input#password, input#number {
     width: 264px;
 }
 label.header {
@@ -1191,7 +1210,7 @@ select {
 }
 
 @media (max-width: 375px) {
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#password, input#login {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#password, input#login, input#number {
     width: 235px;
 }
 input#usrtel1 {
@@ -1213,7 +1232,7 @@ h1.header-agileits {
 label.header {
     font-size: 13px;
 }
-input#firstname, input#lastname, input#class, input#city, input#state, input#zip, input#email, input#address, input#address2 {
+input#firstname, input#lastname, input#class, input#city, input#state, input#zip, input#email, input#address, input#address2, input#password, input#login, input#number{
     width: 195px;
     font-size: 13px;
 }

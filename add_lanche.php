@@ -1,44 +1,51 @@
-<html>
-<head>
-	<title>Add Data</title>
-</head>
-
-<body>
-<?php
-//including the database connection file
-include_once("config.php");
-
-if(isset($_POST['Submit'])) {	
-	$idAluno = mysqli_real_escape_string($mysqli, $_POST['idAluno']);
-	$idAdministrador = mysqli_real_escape_string($mysqli, $_POST['idAdministrador']);
-
-	// checking empty fields
-	if(empty($idAluno) || empty($idAdministrador)) {
-				
-		if(empty($idAluno)) {
-			echo "<font color='red'>aluno field is empty.</font><br/>";
-		}		
-		if(empty($idAdministrador)) {
-			echo "<font color='red'>administrador field is empty.</font><br/>";
-		}
-		//link to the previous padministrador
-		echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
-	} else { 
-		// if all the fields are filled (not empty) 
-		// if student didnt eat today
-		//$data = date("Y-m-d H:i:s");
-		$resquery = mysqli_query($mysqli, "SELECT * FROM lanche_dia WHERE  DATE(NOW()) = DATE(data)  AND idAluno = '$idAluno';");
-		//echo "SELECT * FROM lanche_dia WHERE  DATE(NOW()) = DATE(data)  AND idAluno = '$idAluno';";
-		if (empty (mysqli_fetch_array($resquery))) {
-			//echo "array vazio";
-			$result = mysqli_query($mysqli, "INSERT INTO lanche_dia(idAluno,idAdministrador,data) VALUES('$idAluno','$idAdministrador',NOW())");
-			echo "Sirva o lanche!";
-		} 
-		else {
-			echo "Lanche já servido!";
-		}
-	}
-}
+<?php 
+session_start();
+if ($_SESSION['logged'] == 1) {
 ?>
-</body>
-</html>
+	<!doctype html>
+	<html lang="en">
+	<head>
+		<title>Login</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!-- fonts  -->
+		<link href="//fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet">
+		<link href="//fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
+		<!-- /fonts -->
+		<!-- css -->
+		<link href="css/style.css" rel='stylesheet' type='text/css' media="all" /> 
+		<!-- /css -->
+		<script src="jquery-2.1.0.min.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+				<div id="error" name="error">
+					<!-- error will be shown here ! -->
+				</div>		
+		<h1 class="header-agileits w3layouts w3 w3l w3ls">Bem Nutrido</h1>
+		<div class="content-w3ls agileits agileinfo wthree">
+			<form action="./" method="post">
+				<div class="form-wthree1 agileits agileinfo wthree">
+
+					<div class="form-control"> 
+						<label class="header">Login <span>:</span></label>
+						<input type="number" id="code" name="code" title="Insira o codigo do aluno" required="">
+					</div>
+
+				</div>
+				<div class="clear"></div>
+				
+				<div class="form-control last">
+					<input type="submit" name="connect" id="connect" class="register" value="Registrar">
+
+					<div class="clear"></div>
+				</div>	
+			</form>
+		</div>
+		<p class="copyright w3layouts w3 w3l w3ls">Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
+	</body>
+	</html>
+
+<?php } ?>

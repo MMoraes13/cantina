@@ -9,7 +9,7 @@
   $password = md5($password);
 
   try {
-
+    $_SESSION['logged'] = 0;
     $funcionario = mysqli_query($mysqli, "SELECT * FROM administrador WHERE login='$login'");
     
     while($res = mysqli_fetch_array($funcionario))
@@ -25,14 +25,16 @@
       $_SESSION['id'] = $id;
       $_SESSION['nome'] = $nome;
       $_SESSION['sobrenome'] = $sobrenome;
+      header("add_lanche.php");
     }
     else { 
       $_SESSION['logged'] = 0;
       $_SESSION['id'] = '';
       $_SESSION['nome'] = '';
       $_SESSION['sobrenome'] = '';
+      header("Location: index.php");
     }
-    header("Location: index.php");
+    
   } catch (mysqli_sql_exception $e) { 
     throw new MySQLiQueryException($SQL, $e->getMessage(), $e->getCode());
   }  
