@@ -5,8 +5,8 @@ session_start();
 include_once("config.php");
 if ($_SESSION['logged'] == 1) {
 	$idAdministrador = mysqli_real_escape_string($mysqli, $_SESSION['id']);
-	$idAluno = mysqli_real_escape_string($mysqli, $_POST['code']);
-
+	$idAluno = mysqli_real_escape_string($mysqli, $_POST['id']);
+	$nomeAluno = mysqli_real_escape_string($mysqli, $_POST['firstname']);
 	if(empty($idAluno) || empty($idAdministrador)) {
 
 		if(empty($idAluno)) {
@@ -32,7 +32,13 @@ if ($_SESSION['logged'] == 1) {
 		else {
 			$_SESSION['serviu'] = 0;
 		}
-		header("location:index.php");
+		echo "<script>
+				alert('Lanche servido para ".$nomeAluno."');
+				window.location.href='index.php';
+				</script>";
+
+		//echo "<script type = 'javascript'> alert ('Lanche servido para ".$nomeAluno."'); window.location.href='index.php';</script>";
+		//header("location:index.php");
 	}
 }		
 ?>
