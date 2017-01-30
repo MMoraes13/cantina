@@ -1,10 +1,10 @@
 $(function() {
 
 	// Get the form.
-	var form = $('#ajax-contact');
+	var form = $('#lanche');
 
 	// Get the messages div.
-	var formMessages = $('#form-messages');
+	var formMessages = $('#message');
 
 	// Set up an event listener for the contact form.
 	$(form).submit(function(e) {
@@ -29,9 +29,7 @@ $(function() {
 			$(formMessages).text(response);
 
 			// Clear the form.
-			$('#name').val('');
-			$('#email').val('');
-			$('#message').val('');
+			$('#code').val('');
 		})
 		.fail(function(data) {
 			// Make sure that the formMessages div has the 'error' class.

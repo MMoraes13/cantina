@@ -38,9 +38,9 @@ if(isset($_POST['update']))
 ?>
 <?php
 //getting id from url
-$id = $_GET['id'];
+$id = $_POST['code'];
 if (!isset($id)) {
-	header("Location: add_aluno.html");
+	header("Location: add_aluno.php");
 }
 
 //selecting data associated with this particular id

@@ -6,6 +6,7 @@ include_once("config.php");
 if ($_SESSION['logged'] == 1) {
 	$idAdministrador = mysqli_real_escape_string($mysqli, $_SESSION['id']);
 	$idAluno = mysqli_real_escape_string($mysqli, $_POST['code']);
+
 	if(empty($idAluno) || empty($idAdministrador)) {
 
 		if(empty($idAluno)) {
@@ -25,11 +26,13 @@ if ($_SESSION['logged'] == 1) {
 		if (empty (mysqli_fetch_array($resquery))) {
 			//echo "array vazio";
 			$result = mysqli_query($mysqli, "INSERT INTO lanche_dia(idAluno,idAdministrador,data) VALUES('$idAluno','$idAdministrador',NOW())");
-			echo "serviu";
+			$_SESSION['serviu'] = 1;
+
 		} 
 		else {
-			echo "nao";
+			$_SESSION['serviu'] = 0;
 		}
+		header("location:index.php");
 	}
 }		
 ?>

@@ -23,6 +23,14 @@ h2 {
 	font:inherit;
 	vertical-align:baseline;
 }
+h6{ 
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:80%;
+	font:inherit;
+	text-align: center;
+}
 a{
 	font-family: 'Nova Flat', cursive;
 	margin:0;
@@ -32,9 +40,13 @@ a{
 	font:inherit;
 	vertical-align:baseline;
 }
+a:link, a:visited {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
-}
-html,div,span,applet,object,iframe,h1,h3,h4,h5,h6,p,blockquote,pre,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+html,div,span,applet,object,iframe,h1,h3,h4,h5,p,blockquote,pre,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
 	margin:0;
 	padding:0;
 	border:0;
@@ -62,20 +74,24 @@ table {
 	border-collapse:collapse;
 	border-spacing:0;
 }
+
+
+/* start editing from here */
+a {
+/*-- w3layouts --*/ 
+	text-decoration:none;
+}
+
 button {
-    background-color: #4CAF50; /* Green */
     border: none;
     color: white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 8px;
-}
-
-/* start editing from here */
-a {
-/*-- w3layouts --*/ 
-	text-decoration:none;
+    font-family: 'Nova Flat', cursive;
+    background-color:#36b051;
+	color:#fff;
 }
 .txt-rt {
 	text-align:right;
@@ -750,7 +766,7 @@ p.copyright {
     padding-bottom: 50px;
 }
 p.copyright a {
-	color:#f15f22;
+	color:white;
 }
 p.copyright a:hover {
 	color:#c0392b;

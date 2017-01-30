@@ -25,7 +25,7 @@
       $_SESSION['id'] = $id;
       $_SESSION['nome'] = $nome;
       $_SESSION['sobrenome'] = $sobrenome;
-      header("add_lanche.php");
+      header("Location:index.php");
     }
     else { 
       $_SESSION['logged'] = 0;
