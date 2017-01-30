@@ -2,7 +2,7 @@
 // including the database connection file
 include_once("config.php");
 session_start();
-
+if ($_SESSION['logged'] != 1) { header("Location: acessonegado.php"); }
 if(isset($_POST['update']))
 {	
 
@@ -40,7 +40,7 @@ if(isset($_POST['update']))
 //getting id from url
 $id = $_GET['id'];
 if (!isset($id)) {
-	header("Location: add_aluno.html");
+	header("Location: add_aluno.php");
 }
 
 //selecting data associated with this particular id

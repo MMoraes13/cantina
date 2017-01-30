@@ -65,41 +65,12 @@ if ($_SESSION['logged'] == 1) {
 
 				<div class="form-control last">
 					<input type="submit" class="register" value="Registrar">
-					<input type="reset" class="reset" value="Cancelar">
+					<input type="reset" class="reset" value="Cancelar" onclick="window.location='index.php';">
 					<div class="clear"></div>
 				</div>	
 			</form>
 		</div>
 		<?php
 	} else {
-		?>
-		<html lang="en">
-		<head>
-			<title>Adicionar funcionário</title>
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-			<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-			<!-- fonts  -->
-			<link href="//fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet">
-			<link href="//fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
-			<!-- /fonts -->
-			<!-- css -->
-			<link href="css/style.css" rel='stylesheet' type='text/css' media="all" /> 
-			<!-- /css -->
-		</head>
-		<body>
-			<h1 class="header-agileits w3layouts w3 w3l w3ls">Bem Nutrido</h1>
-			<div class="content-w3ls agileits agileinfo wthree">
-				<div> 
-					<center><h2> Acesso negado </h2></center>
-				</div>
-			</div>
-
-
-			<?php
-		}
-		?>
-		<p class="copyright w3layouts w3 w3l w3ls">Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
-	</body>
-	</html>
+		header ("Location: acessonegado.php");
+	}	

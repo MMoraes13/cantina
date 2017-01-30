@@ -44,4 +44,7 @@ if ($_SESSION['logged'] == 1) {
 	</body>
 	</html>
 
-	<?php } ?>
+	<?php } 
+	 else {
+			header("Location: acessonegado.php");
+		}?>
