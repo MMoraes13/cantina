@@ -6,6 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!doctype html>
 <?php 
+ini_set('session.save_path', 'tmp');  
 session_start(); 
 if ($_SESSION['logged'] == 1) {
 	?>
@@ -34,7 +35,10 @@ if ($_SESSION['logged'] == 1) {
 						<label class="header">Nome <span>:</span></label>
 						<input type="text" id="firstname" name="firstname" placeholder="Nome do aluno" title="Insira o Nome do aluno" required="">
 					</div>
-
+					<div class="form-control"> 
+						<label class="header">Turma <span>:</span></label>
+						<input type="text" id="address" name="address" placeholder="Turma do aluno" title="Turma do aluno" required="">
+					</div>
 				</div>
 
 				<div class="form-wthree2 w3-agileits agileits-w3layouts agile">
@@ -45,14 +49,6 @@ if ($_SESSION['logged'] == 1) {
 					</div>
 
 				</div>
-				<div class="form-wthree2 w3-agileits agileits-w3layouts agile">
-
-					<div class="form-control"> 
-						<label class="header">Turma <span>:</span></label>
-						<input type="text" id="address" name="address" placeholder="Turma do aluno" title="Turma do aluno" required="">
-					</div>
-
-				</div>		
 				<div class="clear"></div>
 
 				<div class="form-control last">

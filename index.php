@@ -6,6 +6,7 @@
 -->
 <html lang="en">
 <?php 
+ini_set('session.save_path', 'tmp');  
 session_start();
 if ($_SESSION['logged'] == 1) {
 	header("Location: add_lanche.php"); 
@@ -44,18 +45,19 @@ else {
 						<label class="header">Login <span>:</span></label>
 						<input type="login" id="login" name="login" title="Insira o login do administrador" required="">
 					</div>
-
-				</div>
-				
-				<div class="form-wthree2 w3-agileits agileits-w3layouts agile">
-					
+										
 					<div class="form-control"> 
 						<label class="header">Senha <span>:</span></label>
 						<input type="password" id="password" name="password"  title="Senha" required="">
 					</div>
 
 				</div>
-				<div class="clear"></div>
+<!-- 				
+				<div class="form-wthree2 w3-agileits agileits-w3layouts agile">
+
+
+				</div>
+				<div class="clear"></div> -->
 				
 				<div class="form-control last">
 					<input type="submit" name="connect" id="connect" class="register" value="Conectar">

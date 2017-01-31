@@ -21,6 +21,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- /css -->
 </head>
 <?php 
+ini_set('session.save_path', 'tmp');  
 session_start();
 if ($_SESSION['logged'] == 1) {
 	
@@ -31,34 +32,37 @@ if ($_SESSION['logged'] == 1) {
 			<form action="add_administrador_back.php" method="post">
 				<div class="form-wthree1 agileits agileinfo wthree">
 
+
+
+				</div>
+
+				<div class="form-wthree2 w3-agileits agileits-w3layouts agile">
+					<div class="form-control"> 
+						<label class="header">Sobrenome <span>:</span></label>
+						<input type="text" id="lastname" name="lastname" placeholder="Sobrenome do funcionário" title="Sobrenome do funcionário" required="">
+					</div>	
+										<div class="form-control"> 
+						<label class="header">Senha<span>:</span></label>
+						<input type="password" id="password" name="password" placeholder="Senha" title="Senha" required="">
+					</div>
+
+				</div>
+
+				<div class="form-wthree2 w3-agileits agileits-w3layouts agile">
+				
 					<div class="form-control"> 
 						<label class="header">Nome <span>:</span></label>
 						<input type="text" id="firstname" name="firstname" placeholder="Nome do funcionário" title="Insira o Nome do funcionário" required="">
 					</div>
 
-				</div>
 
-				<div class="form-wthree2 w3-agileits agileits-w3layouts agile">
-
-					<div class="form-control"> 
-						<label class="header">Sobrenome <span>:</span></label>
-						<input type="text" id="lastname" name="lastname" placeholder="Sobrenome do funcionário" title="Sobrenome do funcionário" required="">
-					</div>
-
-				</div>
-
-				<div class="form-wthree2 w3-agileits agileits-w3layouts agile">
 					<div class="form-control"> 
 						<label class="header">Login <span>:</span></label>
 						<input type="text" id="login" name="login" placeholder="Login do funcionário" title="Login" required="">
 					</div>
 				</div>		
-				<div class="form-wthree2 w3-agileits agileits-w3layouts agile">
+				<div class="form-wthree2 w3-agileits agileits-w3layouts agile last">
 
-					<div class="form-control"> 
-						<label class="header">Senha<span>:</span></label>
-						<input type="password" id="password" name="password" placeholder="Senha" title="Senha" required="">
-					</div>
 
 				</div>		
 				<div class="clear"></div>
@@ -70,6 +74,8 @@ if ($_SESSION['logged'] == 1) {
 				</div>	
 			</form>
 		</div>
+		<h6><p class="copyright w3layouts w3 w3l"> Olá, <?php echo $_SESSION['nome'];?>. <a href="add_lanche.php"> Adicionar lanche </a><span>.<a href="add_administrador.php"> Adicionar administrador </a><span>.</span><a href="add_aluno.php"> Adicionar aluno </a><span>.</span><a href="logout.php"> Sair </a>.</p> </h6>
+		<p class="copyright w3layouts w3 w3l w3ls">Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
 		<?php
 	} else {
 		header ("Location: acessonegado.php");

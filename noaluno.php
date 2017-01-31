@@ -4,7 +4,7 @@ session_start();
 ?>
 		<html lang="en">
 		<head>
-			<title>Acesso negado - Bem Nutrido</title>
+			<titleaddress>Adicionar funcionário</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -21,7 +21,7 @@ session_start();
 			<h1 class="header-agileits w3layouts w3 w3l w3ls">Bem Nutrido</h1>
 			<div class="content-w3ls agileits agileinfo wthree">
 				<div> 
-					<center><h2> Acesso negado. Clique <a href="index.php"> aqui </a> para voltar </h2></center>
+					<center><h2> Aluno não existente. Clique <a href="add_lanche.php"> aqui </a> para tentar novamente. </h2></center>
 					
 				</div>
 			</div>

@@ -1,5 +1,8 @@
 <?php
 // including the database connection file
+
+ini_set('session.save_path', 'tmp');  
+
 include_once("config.php");
 session_start();
 
@@ -39,6 +42,7 @@ session_start();
 }*/
 ?>
 <?php
+if ($_SESSION['logged'] == 1) {
 //getting id from url
 $id = $_POST['code'];
 if (!isset($id)) {
@@ -48,13 +52,19 @@ if (!isset($id)) {
 //selecting data associated with this particular id
 $result = mysqli_query($mysqli, "SELECT * FROM aluno WHERE id=$id");
 
-while($res = mysqli_fetch_array($result))
-{
-	$nome = $res['nome'];
-	$sobrenome = $res['sobrenome'];
-	$turma = $res['turma'];
-	$ativo = $res['ativo'];
-}
+if(mysqli_num_rows($result) == 0)
+   {
+        header ("Location:noaluno.php");
+   } else {
+		while($res = mysqli_fetch_array($result))
+		{
+			$nome = $res['nome'];
+			$sobrenome = $res['sobrenome'];
+			$turma = $res['turma'];
+			$ativo = $res['ativo'];
+		}
+	}
+}	
 ?>
 <html>
 <head>
@@ -115,4 +125,5 @@ while($res = mysqli_fetch_array($result))
 <p class="copyright w3layouts w3 w3l w3ls">Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
 
 </body>
+
 </html>

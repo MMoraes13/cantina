@@ -1,6 +1,9 @@
 
-<?php
+<?php 
+ini_set('session.save_path', 'tmp');  
 session_start();
+
+
 //including the database connection file
 include_once("config.php");
 try{

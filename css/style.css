@@ -212,7 +212,7 @@ label.header span {
 	top:0;
 	/*-- w3ls --*/
 }
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#password, input#login, input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#password, input#login, input#code {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#password, input#login, input#firstname, input#lastname, input#city, input#state, input#zip, input#email, input#address, input#address2, input#password, input#login, input#code  {
     border: 1px solid #fff;
     color: #fff;
     text-align: justify;
@@ -226,21 +226,7 @@ input#firstname, input#lastname, input#city, input#state, input#zip, input#email
 	padding:0 15px;
 	width:297px;
 }
-input#address,input#address2 {
-	border: 1px solid #fff;
-    color: #fff;
-    text-align: justify;
-	/*-- agileits --*/
-    outline: none;
-    letter-spacing: 1px;
-    font-size: 17px;
-    font-weight: normal;
-    background-color: rgba(82, 56, 76, 0.15);
-	height:40px;
-	padding:0 15px;
-	width:79.8%;
-	font-family: 'Nova Flat', cursive;
-}
+ 
 /* -------------------------------- 
 
 radio buttons 
@@ -780,9 +766,7 @@ p.copyright a:hover {
 	input#usrtel1 {
     width: 8%;
 }
-input#address, input#address2 {
-	width:78.7%;
-}
+
 select {
 	width:59%;
 }
@@ -801,9 +785,7 @@ input#firstname, input#lastname, input#city, input#state, input#zip, input#email
 input#usrtel2 {
     width: 30.3%;
 }
-input#address, input#address2 {
-    width: 76.4%;
-}
+
 .cd-form input[type="text"], .cd-form input[type="email"], .cd-form input[type="password"] {
     width: 74%;
 }
@@ -829,9 +811,7 @@ input#usrtel2 {
 .cd-form select {
 	height:42px;
 }
-input#address, input#address2 {
-    width: 75.1%;
-}
+
 select {
     width: 54%;
 }
@@ -847,9 +827,7 @@ input#firstname, input#lastname, input#city, input#state, input#zip, input#email
 input#usrtel2 {
     width: 25%;
 }
-input#address, input#address2 {
-    width: 74.4%;
-}
+
 select {
     width: 52.6%;
 }
@@ -878,10 +856,6 @@ input#usrtel2 {
 }
 .cd-form select {
 	font-size:14px;
-}
-input#address, input#address2 {
-	font-size:14px;
-	width:73.9%;
 }
 select {
 	font-size:14px;
@@ -927,7 +901,7 @@ p.copyright {
 }
 
 @media (max-width:1050px) {
-input#firstname, input#lastname, input#city, input#state, input#zip, input#email,input#address, input#address2, input#login,  input#password, input#number {
+input#firstname, input#lastname, input#city, input#state, input#zip, input#email,input#address2, input#login,  input#password, input#number, input#address, input#address2  {
 	width:166px;
 }
 input#usrtel2 {
@@ -935,9 +909,6 @@ input#usrtel2 {
 }
 select#card-expiry-month {
     width: 53px;
-}
-input#address, input#address2 {
-	width:73%;
 }
 select {
     width: 51%;

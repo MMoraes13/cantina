@@ -1,5 +1,6 @@
-	<?php
+<?php
 //including the database connection file
+ini_set('session.save_path', 'tmp');  
 	session_start();
 	include_once("config.php");
 	try {
@@ -33,10 +34,10 @@
 				$result = mysqli_query($mysqli, "INSERT INTO aluno(nome,sobrenome,turma, ativo) VALUES('$nomeAluno','$sobrenome', '$turma', 1);");
 
 		//display success messadministrador
-			echo "<script>
-			alert('Aluno ".$nomeAluno." ".$sobrenome." adicionado.');
-			window.location.href='index.php';
-			</script>";
+				echo "<script>
+				alert('Aluno ".$nomeAluno." ".$sobrenome." adicionado.');
+				window.location.href='index.php';
+				</script>";
 			} 
 		} else {
 			header("Location: acessonegado.php");
@@ -44,7 +45,7 @@
 	} catch (mysqli_sql_exception $e) { 
 		header("Location: erro.php");
 	}	
-	?>
+?>
 
 
 

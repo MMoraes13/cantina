@@ -1,4 +1,5 @@
 <?php 
+ini_set('session.save_path', 'tmp');  
 session_start();
 if ($_SESSION['logged'] == 1) {
 	?>
@@ -23,7 +24,7 @@ if ($_SESSION['logged'] == 1) {
 
 		<div class="content-w3ls agileits agileinfo wthree">
 			<form action="add_view_lanche.php" method="post" id="lanche" name"lanche">
-				<div class="form-wthree1 agileits agileinfo wthree">
+				<div class="form-wthree w3-agileits agileits-w3layouts">
 					<div class="form-control"> 
 						<label class="header">Aluno <span>:</span></label>
 						<input type="number" id="code" name="code" title="Insira o codigo do aluno" required="">

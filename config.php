@@ -13,10 +13,10 @@ $conn = mysql_connect("localhost","root","root")
  * using mysqli_connect instead
  */
 
-$databaseHost = 'localhost';
+$databaseHost = 'cantina.mysql.dbaas.com.br';
 $databaseName = 'cantina';
-$databaseUsername = 'root';
-$databasePassword = '123456';
+$databaseUsername = 'cantina';
+$databasePassword = 'B3mNutr1d0';
    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
    try { 
       $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
