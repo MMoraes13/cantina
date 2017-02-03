@@ -38,28 +38,33 @@ if ($_SESSION['logged'] == 1) {
 
 				<div class="form-wthree2 w3-agileits agileits-w3layouts agile">
 					<div class="form-control"> 
+
+
+					<div class="form-control"> 
+						<label class="header">Nome <span>:</span></label>
+						<input type="text" id="firstname" name="firstname" placeholder="Nome do funcionário" title="Insira o Nome do funcionário" required="">
+					</div>
+
 						<label class="header">Sobrenome <span>:</span></label>
 						<input type="text" id="lastname" name="lastname" placeholder="Sobrenome do funcionário" title="Sobrenome do funcionário" required="">
 					</div>	
-										<div class="form-control"> 
-						<label class="header">Senha<span>:</span></label>
-						<input type="password" id="password" name="password" placeholder="Senha" title="Senha" required="">
-					</div>
+
 
 				</div>
 
 				<div class="form-wthree2 w3-agileits agileits-w3layouts agile">
 				
-					<div class="form-control"> 
-						<label class="header">Nome <span>:</span></label>
-						<input type="text" id="firstname" name="firstname" placeholder="Nome do funcionário" title="Insira o Nome do funcionário" required="">
-					</div>
 
 
 					<div class="form-control"> 
 						<label class="header">Login <span>:</span></label>
 						<input type="text" id="login" name="login" placeholder="Login do funcionário" title="Login" required="">
 					</div>
+
+										<div class="form-control"> 
+						<label class="header">Senha<span>:</span></label>
+						<input type="password" id="password" name="password" placeholder="Senha" title="Senha" required="">
+					</div>					
 				</div>		
 				<div class="form-wthree2 w3-agileits agileits-w3layouts agile last">
 

@@ -5,41 +5,6 @@ ini_set('session.save_path', 'tmp');
 
 include_once("config.php");
 session_start();
-
-/*if(isset($_POST['update']))
-{	
-
-	$id = mysqli_real_escape_string($mysqli, $_POST['id']);
-	
-	$nome = mysqli_real_escape_string($mysqli, $_POST['firstname']);
-	$sobrenome = mysqli_real_escape_string($mysqli, $_POST['lastname']);
-	$turma = mysqli_real_escape_string($mysqli, $_POST['address']);	
-	
-	$selectAluno = "SELECT * FROM aluno WHERE aluno.id = ".$id;
-	echo $selectAluno;
-	// checking empty fields
-	if(empty($nome) || empty($sobrenome) || empty($turma)) {	
-			
-		if(empty($nome)) {
-			echo "<font color='red'>Name field is empty.</font><br/>";
-		}
-		
-		if(empty($sobrenome)) {
-			echo "<font color='red'>sobrenome field is empty.</font><br/>";
-		}
-		
-		if(empty($turma)) {
-			echo "<font color='red'>turma field is empty.</font><br/>";
-		}		
-	} else {	
-		$ativo = isset($_POST['ativo']) ? 1 : 0;
-		echo "UPDATE aluno SET nome='$nome',sobrenome=$sobrenome,turma=$turma, ativo=$ativo WHERE id=$id";
-		$result = mysqli_query($mysqli, "UPDATE aluno SET nome='$nome',sobrenome='$sobrenome',turma='$turma', ativo='$ativo' WHERE id='$id';");
-		
-		//redirectig to the display page. In our case, it is index.php
-		//header("Location: index.php");
-	}
-}*/
 ?>
 <?php
 if ($_SESSION['logged'] == 1) {
@@ -50,7 +15,7 @@ if (!isset($id)) {
 }
 
 //selecting data associated with this particular id
-$result = mysqli_query($mysqli, "SELECT * FROM aluno WHERE id=$id");
+$result = mysqli_query($mysqli, "SELECT * FROM aluno WHERE (matricula-'$id')=0");
 
 if(mysqli_num_rows($result) == 0)
    {
@@ -58,8 +23,8 @@ if(mysqli_num_rows($result) == 0)
    } else {
 		while($res = mysqli_fetch_array($result))
 		{
+			$idAluno = $res['id'];
 			$nome = $res['nome'];
-			$sobrenome = $res['sobrenome'];
 			$turma = $res['turma'];
 			$ativo = $res['ativo'];
 		}
@@ -108,12 +73,11 @@ if(mysqli_num_rows($result) == 0)
 				<label class="header">Turma <span>:</span></label>
 				<input type="text" id="address" name="address" placeholder="Turma do aluno" title="Turma do aluno" value="<?php echo $turma ?>" required="" readonly>
 			</div>
-		
 		</div>	
 
 		<div class="clear"></div>
 		<div class="form-control last">
-			<input type="hidden" value=<?php echo $id; ?> id="id" name="id"/>
+			<input type="hidden" value=<?php echo $idAluno; ?> id="idAluno" name="idAluno"/>
 			<input type="hidden" value="update" id="update" name="update"/>
 			<input type="submit" class="register" value="Confirmar">
 			<input type="reset" class="reset" value="Cancelar" onclick="window.location.href ='index.php'">

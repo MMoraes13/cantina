@@ -36,16 +36,16 @@ if ($_SESSION['logged'] == 1) {
 						<input type="text" id="firstname" name="firstname" placeholder="Nome do aluno" title="Insira o Nome do aluno" required="">
 					</div>
 					<div class="form-control"> 
-						<label class="header">Turma <span>:</span></label>
-						<input type="text" id="address" name="address" placeholder="Turma do aluno" title="Turma do aluno" required="">
+						<label class="header">Matricula <span>:</span></label>
+						<input type="number" id="lastname" name="lastname" placeholder="Matricula do aluno" title="Matricula do aluno" required="">
 					</div>
 				</div>
 
 				<div class="form-wthree2 w3-agileits agileits-w3layouts agile">
 
 					<div class="form-control"> 
-						<label class="header">Sobrenome <span>:</span></label>
-						<input type="text" id="lastname" name="lastname" placeholder="Sobrenome do aluno" title="Sobrenome do aluno" required="">
+						<label class="header">Turma <span>:</span></label>
+						<input type="text" id="address" name="address" placeholder="Turma do aluno" title="Turma do aluno" required="">
 					</div>
 
 				</div>
