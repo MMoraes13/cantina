@@ -49,7 +49,7 @@ try{
 			header("Location: acessonegado.php");
 		}
 } catch (mysqli_sql_exception $e) { 
-	header("Location: erro.php");
+	header("Location: erro_banco.html");
 }
 ?>
 

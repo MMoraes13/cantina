@@ -37,7 +37,7 @@ ini_set('session.save_path', 'tmp');
     }
     
   } catch (mysqli_sql_exception $e) { 
-    throw new MySQLiQueryException($SQL, $e->getMessage(), $e->getCode());
+    header("Location: acessonegado.php");
   }  
 
 
