@@ -6,7 +6,7 @@ session_start();
 include_once("config.php");
 if ($_SESSION['logged'] == 1) { 
   try {
-    $idAdministrador = mysqli_real_escape_string($mysqli, $_SESSION['id']);
+    $idAdministrador = mysqli_real_escape_string($mysqli, $_SESSION['idAdmin']);
     $idAluno = mysqli_real_escape_string($mysqli, $_POST['idAluno']);
     $nomeAluno = mysqli_real_escape_string($mysqli, $_POST['firstname']);
     $dirIdAluno = trim($idAdministrador);
@@ -14,10 +14,10 @@ if ($_SESSION['logged'] == 1) {
 
     // if all the fields are filled (not empty) 
     // if student didnt eat today
-      $data = date("Y-m-d H:i:s");
-      $resquery = mysqli_query($mysqli, "SELECT * FROM lanche_dia WHERE  DATE(NOW()) = DATE('$data')  AND idAluno = '$idAluno';");
+   
+      $resquery = mysqli_query($mysqli, "SELECT DATE(lanche_dia.data) FROM lanche_dia WHERE DATE(NOW()) = DATE(lanche_dia.data) AND idAluno = '$idAluno';");
       $dirresquery = trim(mysqli_fetch_array($resquery));
-      echo "SELECT * FROM lanche_dia WHERE  DATE(NOW()) = DATE('$data')  AND idAluno = '$idAluno';";
+      echo "SELECT DATE(lanche_dia.data) FROM lanche_dia WHERE DATE(NOW()) = DATE(lanche_dia.data) AND idAluno = '$idAluno';";
       if (mysqli_num_rows($resquery) == 0) {
       //echo "array vazio";
         echo "INSERT INTO lanche_dia(idAluno,idAdministrador,data) VALUES('$idAluno','$idAdministrador',NOW())";

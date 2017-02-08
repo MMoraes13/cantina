@@ -58,7 +58,7 @@ if ($_SESSION['logged'] == 1) {
 				</div>	
 			</form>
 		</div>
-		<h6><p class="copyright w3layouts w3 w3l"> Olá, <?php echo $_SESSION['nome'];?>. <a href="add_lanche.php"> Adicionar lanche </a><span>.<a href="add_administrador.php"> Adicionar administrador </a><span>.</span><a href="add_aluno.php"> Adicionar aluno </a><span>.</span><a href="logout.php"> Sair </a>.</p> </h6>
+		<h6><p class="copyright w3layouts w3 w3l"> Olá, <?php echo $_SESSION['nomeAdmin'];?>. <a href="add_lanche.php"> Adicionar lanche </a><span>.<a href="add_administrador.php"> Adicionar administrador </a><span>.</span><a href="add_aluno.php"> Adicionar aluno </a><span>.</span><a href="logout.php"> Sair </a>.</p> </h6>
 		<p class="copyright w3layouts w3 w3l w3ls">Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
 	</body>
 	</html>

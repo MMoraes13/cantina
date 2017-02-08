@@ -23,15 +23,15 @@ ini_set('session.save_path', 'tmp');
     }
     if ($pass == $password ) {
       $_SESSION['logged'] = 1;
-      $_SESSION['id'] = $id;
-      $_SESSION['nome'] = $nome;
+      $_SESSION['idAdmin'] = $id;
+      $_SESSION['nomeAdmin'] = $nome;
       $_SESSION['sobrenome'] = $sobrenome;
       header("Location:index.php");
     }
     else { 
       $_SESSION['logged'] = 0;
-      $_SESSION['id'] = '';
-      $_SESSION['nome'] = '';
+      $_SESSION['idAdmin'] = '';
+      $_SESSION['nomeAdmin'] = '';
       $_SESSION['sobrenome'] = '';
       header("Location: index.php");
     }

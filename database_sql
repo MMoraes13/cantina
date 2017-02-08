@@ -1,0 +1,36 @@
+drop table lanche_dia;
+drop table administrador;
+drop table aluno;
+
+
+
+CREATE TABLE `administrador` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) DEFAULT NULL,
+  `sobrenome` varchar(100) NOT NULL,
+  `login` varchar(45) NOT NULL,
+  `pass` varchar(32) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `login_UNIQUE` (`login`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `aluno` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
+  `matricula` varchar(45) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `turma` varchar(100) DEFAULT NULL,
+  `ativo` tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=352 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `lanche_dia` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idAluno` int(3) DEFAULT NULL,
+  `idAdministrador` int(3) DEFAULT NULL,
+  `data` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idAluno_idx` (`idAluno`),
+  KEY `idAdministrador_idx` (`idAdministrador`,`idAluno`),
+  CONSTRAINT `idAdministrador` FOREIGN KEY (`idAdministrador`) REFERENCES `administrador` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `idAluno` FOREIGN KEY (`idAluno`) REFERENCES `aluno` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;

@@ -25,6 +25,7 @@ if(mysqli_num_rows($result) == 0)
 		{
 			$idAluno = $res['id'];
 			$nome = $res['nome'];
+			$matricula = $res['matricula'];
 			$turma = $res['turma'];
 			$ativo = $res['ativo'];
 		}
@@ -62,8 +63,8 @@ if(mysqli_num_rows($result) == 0)
 		<div class="form-wthree2 w3-agileits agileits-w3layouts agile">
 			
 			<div class="form-control"> 
-				<label class="header">Sobrenome <span>:</span></label>
-				<input type="text" id="lastname" name="lastname" placeholder="Sobrenome do aluno" title="Sobrenome do aluno" value="<?php echo $sobrenome ?>" required="" readonly>
+				<label class="header">Matricula <span>:</span></label>
+				<input type="text" id="lastname" name="lastname" placeholder="Matricula" title="Sobrenome do aluno" value="<?php echo $matricula ?>" required="" readonly>
 			</div>
 		
 		</div>
@@ -85,7 +86,7 @@ if(mysqli_num_rows($result) == 0)
 		</div>	
 	</form>
 </div>
-<h6><p class="copyright w3layouts w3 w3l"> Olá, <?php echo $_SESSION['nome'];?>. <a href="add_lanche.php"> Adicionar lanche </a><span>.<a href="add_administrador.php"> Adicionar administrador </a><span>.</span><a href="add_aluno.php"> Adicionar aluno </a><span>.</span><a href="logout.php"> Sair </a>.</p> </h6>
+<h6><p class="copyright w3layouts w3 w3l"> Olá, <?php echo $_SESSION['nomeAdmin'];?>. <a href="add_lanche.php"> Adicionar lanche </a><span>.<a href="add_administrador.php"> Adicionar administrador </a><span>.</span><a href="add_aluno.php"> Adicionar aluno </a><span>.</span><a href="logout.php"> Sair </a>.</p> </h6>
 <p class="copyright w3layouts w3 w3l w3ls">Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
 
 </body>
